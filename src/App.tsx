@@ -23,13 +23,26 @@ function App() {
   return (
     <div className="md:h-screen w-screen md:overflow-y-auto text-slate-900">
       <div className="flex flex-col items-center p-4 pb-10 md:p-10">
-        <div className="py-12 flex items-center">
+        <div className="py-12 flex flex-col items-center">
           <h1 className="flex items-center gap-2 text-3xl font-medium select-none">
-            Another{" "}
+            Another
             <span className="p-1 w-7 h-7 bg-slate-900 text-white flex justify-center items-center rounded-lg font-normal text-sm">
               UI
             </span>
           </h1>
+          <div className="flex flex-col items-center gap-2 text-sm mt-4 text-slate-500 max-w-sm md:max-w-lg text-center">
+            <p>
+              You can found these available components on{" "}
+              <code className="bg-slate-100 px-1 py-0.5 rounded-md">
+                ./src/components
+              </code>{" "}
+              folder.
+            </p>
+            <p>
+              Take your time to interact and, if you like it, you can delete the
+              content of this page and start building your amazing app.
+            </p>
+          </div>
         </div>
         <div className="flex flex-col md:flex-row gap-10 h-max flex-1">
           <div className="flex flex-col gap-10 h-max">
@@ -129,7 +142,7 @@ const Tile: React.FC<{
 }> = ({ title, description, children, options }) => {
   return (
     <div
-      className={`w-full flex-1 h-max flex flex-col items-start rounded-lg ring-2 ring-slate-200 px-4 py-3 max-w-lg`}
+      className={`w-full flex-1 h-max flex flex-col items-start rounded-lg ring-1 ring-slate-200 px-4 py-3 max-w-lg`}
     >
       <div>
         <h1 className="font-medium">{title}</h1>
